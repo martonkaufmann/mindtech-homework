@@ -10,6 +10,6 @@ class ListController extends Controller
 {
     public function __invoke(): JsonResponse
     {
-        return response()->json(Restaurant::paginate());
+        return response()->json(Restaurant::select(['id', 'name'])->paginate());
     }
 }
