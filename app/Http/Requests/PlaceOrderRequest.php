@@ -8,7 +8,7 @@ use App\Rules\ItemBelongsToRestaurant;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
-class StoreOrderRequest extends FormRequest
+class PlaceOrderRequest extends FormRequest
 {
     public function rules(): array
     {

@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace App\Http\Controllers\Order;
+namespace App\Http\Controllers\Customer;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreOrderRequest;
+use App\Http\Requests\PlaceOrderRequest;
 use App\Models\Order;
 use Illuminate\Http\JsonResponse;
 
-class StoreController extends Controller
+class PlaceOrderController extends Controller
 {
-    public function __invoke(StoreOrderRequest $request): JsonResponse
+    public function __invoke(PlaceOrderRequest $request): JsonResponse
     {
         $items = array_map(fn (array $item) => [
             'quantity' => $item['quantity'],

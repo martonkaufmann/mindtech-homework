@@ -8,7 +8,7 @@ use App\Enums\OrderStatus;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
-class UpdateOrderStatusRequest extends FormRequest
+class OrderUpdateStatusRequest extends FormRequest
 {
     public function rules(): array
     {

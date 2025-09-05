@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace App\Http\Controllers\Order;
+namespace App\Http\Controllers\Restaurant;
 
 use App\Http\Controllers\Controller;
 use App\Models\Restaurant;
 use Illuminate\Http\JsonResponse;
 
-class ListController extends Controller
+class OrderListController extends Controller
 {
     public function __invoke(): JsonResponse
     {
