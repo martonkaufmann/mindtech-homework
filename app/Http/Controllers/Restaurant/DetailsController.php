@@ -8,10 +8,8 @@ use Illuminate\Http\JsonResponse;
 
 class DetailsController extends Controller
 {
-    public function __invoke(int $id): JsonResponse
+    public function __invoke(Restaurant $restaurant): JsonResponse
     {
-        $restaurant = Restaurant::findOrFail($id);
-
         return response()->json($restaurant);
     }
 }

@@ -6,5 +6,5 @@ use App\Http\Controllers\Restaurant\DetailsController;
 
 Route::prefix('restaurants')->group(function () {
     Route::get('/', ListController::class);
-    Route::get('/{id}', DetailsController::class)->where('id', '[0-9]+');
+    Route::get('/{restaurant}', DetailsController::class);
 });
