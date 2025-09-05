@@ -18,7 +18,7 @@ class MenuCategory extends Model
         return $this->belongsTo(Menu::class);
     }
 
-    public function menuItems(): HasMany
+    public function items(): HasMany
     {
         return $this->hasMany(MenuItem::class);
     }
