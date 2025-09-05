@@ -59,3 +59,15 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Local setup
+
+* Build the image
+  * `podman build --tag=homework . --no-cache`
+* Install dependencies
+  * `podman container run -v .:/var/www/html/homework:z homework composer install`
+* Start the container
+  * `podman container run -p 8000:8000 -p 5173:5173 -v .:/var/www/html/homework:z homework`
+
+Running command inside the container:
+`podman container run -it -p 8000:8000 -p 5173:5173 -v .:/var/www/html/homework:z homework /bin/bash`
