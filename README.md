@@ -68,6 +68,9 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
   * `podman container run -v .:/var/www/html/homework:z homework composer install`
 * Start the container
   * `podman container run --name=homework -p 8000:8000 -p 5173:5173 -v .:/var/www/html/homework:z homework`
+* Setup database
+  * `podman container exec homework php artisan migrate`
+  * `podman container exec homework php artisan db:seed`
 
 Running command inside the container:
 `podman container exec homework composer format`
