@@ -10,11 +10,10 @@ return new class () extends Migration {
      */
     public function up(): void
     {
-        Schema::create('restaurants', function (Blueprint $table) {
+        Schema::create('menu_categories', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('menu_id')->constrained()->onDelete('cascade');
             $table->string('name');
-            $table->text('address');
-            $table->string('telephone', 24);
             $table->timestamps();
         });
     }
@@ -24,6 +23,6 @@ return new class () extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('restaurants');
+        Schema::dropIfExists('menu_categories');
     }
 };

@@ -57,7 +57,8 @@
         "test": [
             "@php artisan config:clear --ansi",
             "@php artisan test"
-        ]
+        ],
+        "format": "pint --preset psr12"
     },
     "extra": {
         "laravel": {

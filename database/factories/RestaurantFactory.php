@@ -9,7 +9,7 @@ class RestaurantFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->company() . ' Restaurant',
+            'name' => fake()->company().' Restaurant',
             'address' => fake()->address(),
             'telephone' => fake()->phoneNumber(),
         ];
