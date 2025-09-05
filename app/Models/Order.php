@@ -10,9 +10,10 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Order extends Model
 {
-    protected $casts = [
-        'customer_id' => 'string',
-    ];
+    public function customer(): BelongsTo
+    {
+        return $this->belongsTo(User::class);
+    }
 
     public function restaurant(): BelongsTo
     {

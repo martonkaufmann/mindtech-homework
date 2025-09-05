@@ -12,3 +12,4 @@
 */
 
 require_once 'api/restaurant.php';
+require_once 'api/order.php';
