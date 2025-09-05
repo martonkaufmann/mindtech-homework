@@ -9,14 +9,16 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class OrderItem extends Model
 {
+    protected $fillable = [
+        'order_id',
+        'menu_item_id',
+        'quantity',
+        'instructions',
+    ];
+
     public function order(): BelongsTo
     {
         return $this->belongsTo(Order::class);
-    }
-
-    public function restaurant(): BelongsTo
-    {
-        return $this->belongsTo(Restaurant::class);
     }
 
     public function menuItem(): BelongsTo
