@@ -12,6 +12,7 @@ class ListController extends Controller
 {
     public function __invoke(): JsonResponse
     {
+        // TODO: Only return order and not all the details.
         $orders = Restaurant::find(1)->orders() // TODO: Use actual logged in restaurant id
             ->with(['customer:id,name' ,'items.menuItem:id,name'])
             ->where('restaurant_id', 1)

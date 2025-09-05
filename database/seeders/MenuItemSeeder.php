@@ -84,14 +84,14 @@ final class MenuItemSeeder extends Seeder
             $items = Arr::random(self::ITEMS[$category->name], rand(1, count(self::ITEMS[$category->name])));
 
             foreach ($items as $item) {
-                MenuItem::create([
-                    'menu_category_id' => $category->id,
-                    'name' => $item['name'],
-                    'description' => $item['description'],
-                    'price' => $item['price'],
-                    'ingredients' => $item['ingredients'],
-                    'available' => true,
-                ]);
+                $menuItem = new MenuItem();
+                $menuItem->menu_category_id = $category->id;
+                $menuItem->name = $item['name'];
+                $menuItem->description = $item['description'];
+                $menuItem->price = $item['price'];
+                $menuItem->ingredients = $item['ingredients'];
+                $menuItem->available = true;
+                $menuItem->save();
             }
         }
     }

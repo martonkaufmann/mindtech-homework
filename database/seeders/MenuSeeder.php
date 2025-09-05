@@ -15,9 +15,9 @@ class MenuSeeder extends Seeder
         $restaurants = Restaurant::all();
 
         foreach ($restaurants as $restaurant) {
-            Menu::create([
-                'restaurant_id' => $restaurant->id,
-            ]);
+            $menu = new Menu();
+            $menu->restaurant_id = $restaurant->id;
+            $menu->save();
         }
     }
 }

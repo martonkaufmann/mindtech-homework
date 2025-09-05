@@ -15,12 +15,6 @@ class Order extends Model
         'status' => OrderStatus::Received,
     ];
 
-    protected $fillable = [
-        'customer_id',
-        'restaurant_id',
-        'status',
-    ];
-
     protected function casts(): array
     {
         return [

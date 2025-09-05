@@ -31,10 +31,10 @@ final class MenuCategorySeeder extends Seeder
             $categories = Arr::random(self::CATEGORIES, rand(1, count(self::CATEGORIES)));
 
             foreach ($categories as $category) {
-                MenuCategory::create([
-                    'menu_id' => $menu->id,
-                    'name' => $category,
-                ]);
+                $menuCategory = new MenuCategory();
+                $menuCategory->menu_id = $menu->id;
+                $menuCategory->name = $category;
+                $menuCategory->save();
             }
         }
     }
