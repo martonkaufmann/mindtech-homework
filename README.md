@@ -74,3 +74,6 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 Running command inside the container:
 `podman container exec homework composer format`
+
+
+NOTE: Tests and swagger are AI slop I didn't have time to properly check and fix them
